@@ -24,6 +24,10 @@ img{
 	margin-top: 20px;
 }
 
+img:hover {
+	cursor: pointer;
+}
+
 #begin, .outcome, .response1, .response2 {
 	margin-bottom: 30px;
 }
