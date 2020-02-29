@@ -5,6 +5,7 @@
 body{
 	background-color: #31263e;
 	color: #f7f7f7;
+	font-family: "Montserrat";
 	text-align: center;
 }
 
@@ -18,11 +19,28 @@ img{
 	margin-top: 20px;
 }
 
+#begin, .outcome, .response1, .response2 {
+	margin-bottom: 30px;
+}
+
 .page-header{
 	background: #221E22;
+	font-family: "Merriweather";
+	font-size: 1.5rem;
+	letter-spacing: 5px;
 	margin-bottom: 50px;
-	font-size: 2rem;
+	padding: 20px 0;
 	text-transform: capitalize;
+}
+
+.game-over {
+	letter-spacing: 4px;
+	margin-bottom: 30px;
+	text-transform: capitalize;
+}
+
+.game-info {
+	color: #d79828;
 }
 
 .image{
@@ -42,7 +60,7 @@ img{
 }
 
 .butn {
-  background-image: linear-gradient(to bottom, #3498db, #2980b9);
+  background-image: linear-gradient(to bottom, #eca72c, #d79828);
   border-radius: 25px;
   border:none;
   color:#fff;
@@ -52,6 +70,22 @@ img{
 }
 
 .butn:hover {
-  background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+  background-image: linear-gradient(to bottom, #edaf3f, #efb752);
   text-decoration: none;
+}
+
+@media (max-width: 450px) {
+	body {
+		font-size: 14px;
+	}
+	th, td {
+		padding: 15px;
+	}
+	.page-header {
+		font-size: 1rem;
+	}
+	.image > img {
+		height: 70px;
+		width: 70px;
+	}
 }

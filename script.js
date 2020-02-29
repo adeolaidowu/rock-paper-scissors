@@ -64,8 +64,8 @@ function playRound(playerSelection, computerSelection){
         }
     }
 function checkRound(){
-    if(gameRound == 5){
-        document.querySelector("h1").textContent = "game over"
+    if(playerScore == 5 || computerScore == 5){
+        document.querySelector(".game-over").textContent = "game over!!!"
         document.querySelector(".outcome").textContent = getWinner(playerScore, computerScore);
         for (let i = 0; i < images.length; i++) {
             images[i].classList.add("hide");
@@ -81,6 +81,7 @@ function playGame(playerSelection){
     document.querySelector(".response1").textContent = `Computer chose: ${computerSelection}.`;
     document.querySelector(".response2").textContent = `You chose: ${playerSelection}.`;
     document.querySelector(".outcome").textContent = playRound(playerSelection, computerSelection);
+    document.querySelector('.game-info').textContent = "";
     document.querySelector("#yourscore").textContent = playerScore;
     document.querySelector("#compscore").textContent = computerScore;
     checkRound();
@@ -88,9 +89,9 @@ function playGame(playerSelection){
 
 function getWinner(playerScore, computerScore){
     if(playerScore > computerScore){
-        return "Congratulations, you win the game!";
+        return "Congratulations, you win the game! 🎊 😊 🎊";
     }else if(playerScore < computerScore){
-        return "Too bad, you lose the game..Try again";
+        return "Too bad, you lose the game..Try again 😢";
     }else{
         return "Wheew, what a game. You tied!!"
     }
@@ -100,8 +101,9 @@ function restartGame(){
     for (let i = 0; i < images.length; i++) {
             images[i].classList.remove("hide");
         }
-        document.querySelector("h1").textContent = "let's play rock paper scissors!";
-        document.querySelector("#begin").textContent = "Choose rock paper or scissors to begin";
+        document.querySelector('.game-over').textContent = "";
+        document.querySelector('.game-info').textContent = "First to 5 wins";
+        document.querySelector("#begin").textContent = "Make your move";
         document.querySelector(".response1").textContent = "";
         document.querySelector(".response2").textContent = "";
         document.querySelector(".outcome").textContent = "";
