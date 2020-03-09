@@ -32,6 +32,14 @@ img:hover {
 	margin-bottom: 30px;
 }
 
+#rock, #paper, #scissors {
+	transition: transform 100ms;
+}
+
+#rock:active, #paper:active, #scissors:active {
+	transform: scale(0.95);
+}
+
 .page-header{
 	background: #221E22;
 	font-family: "Merriweather";
@@ -76,11 +84,20 @@ img:hover {
   font-size: 20px;
   padding: 10px 20px;
   text-decoration: none;
+  transition: transform 100ms;
 }
 
 .butn:hover {
   background-image: linear-gradient(to bottom, #edaf3f, #efb752);
   text-decoration: none;
+}
+
+.butn:focus {
+	outline: none;
+}
+
+.butn:active {
+	transform: scale(0.95);
 }
 
 @media (max-width: 450px) {
